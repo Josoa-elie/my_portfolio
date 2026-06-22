@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josoa Elie — Développeur Logiciel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/icons/fontawesome/css/all.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <a href="index.html" class="nav__logo" aria-label="Accueil">Josoa<span>.</span>Elie</a>
+
+      <button class="nav__toggle" id="toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="menu" role="list">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="page/services.html">Services</a></li>
+        <li><a href="page/projets.html">Projets</a></li>
+        <li><a href="page/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" aria-label="Présentation">
+
+      <!-- Texte gauche -->
+      <div class="hero__text">
+        <p class="hero__badge">Étudiant en informatique &middot; Software Development</p>
+
+        <h1 class="hero__title">
+          Bonjour, je suis<br>
+          <em>Josoa Elie</em>
+        </h1>
+
+        <p class="hero__desc">
+          Passionné par l'ingénierie logicielle, je conçois des expériences numériques soignées
+          et maîtrise un large éventail de langages et de technologies modernes.
+        </p>
+
+        <div class="hero__actions">
+          <!-- CV download -->
+          <a href="assets/images/Mon_CV.png" class="btn-outline" download>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Télécharger CV
+          </a>
+
+          <!-- Réseaux -->
+          <nav class="socials" aria-label="Réseaux sociaux">
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/elie.josoa" target="_blank"
+               rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/Josoa-elie" target="_blank"
+               rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61
+                         c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77
+                         5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0
+                         C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78
+                         c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/261346310581" target="_blank"
+               rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7
+                         8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
+                         8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+            </a>
+
+          </nav>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero__stats" role="list" aria-label="Statistiques">
+          <div class="stat" role="listitem">
+            <div class="stat__n">3</div>
+            <div class="stat__l">Ans d'études</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__n">3</div>
+            <div class="stat__l">Projets réalisés</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__n">5</div>
+            <div class="stat__l">Techno maîtrisées</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo droite -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="ring ring--1"></div>
+        <div class="ring ring--2"></div>
+        <div class="photo">
+          <img src="assets/images/profil.png" alt="Photo de Josoa Elie"
+            loading="eager"
+            decoding="async">
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

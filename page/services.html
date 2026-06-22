@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Josoa Elie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/services.css">
+  <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <a href="../index.html" class="nav__logo">Josoa<span>.</span>Elie</a>
+
+      <button class="nav__toggle" id="toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="menu" role="list">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- PAGE HERO HEADER -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag anim anim-d1">Ce que je propose</p>
+        <h1 class="section-title anim anim-d2">
+          Mes <em>Services</em>
+        </h1>
+        <p class="section-desc anim anim-d3">
+          Étudiant en développement logiciel, je transforme vos idées en solutions numériques
+          concrètes — du design à la base de données.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services" aria-label="Services proposés">
+      <div class="container">
+
+        <div class="services__grid" role="list">
+
+          <!-- Card 1 : Site web -->
+          <article class="service-card stagger" role="listitem">
+            <span class="service-card__num" aria-hidden="true">01</span>
+
+            <div class="service-card__icon" aria-hidden="true">
+              <!-- Globe icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10
+                         15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg>
+            </div>
+
+            <h2 class="service-card__title">Développement de site Web</h2>
+            <p class="service-card__desc">
+              Conception et réalisation de sites web modernes, responsives et performants.
+              De la page vitrine au site multi-pages, avec une attention particulière
+              portée à l'expérience utilisateur et à la qualité du code.
+            </p>
+            <div class="service-card__tags">
+              <span class="tag-pill">HTML / CSS</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">Bootstrap</span>
+              <span class="tag-pill">Responsive</span>
+            </div>
+          </article>
+
+          <!-- Card 2 : Application web -->
+          <article class="service-card stagger" role="listitem">
+            <span class="service-card__num" aria-hidden="true">02</span>
+
+            <div class="service-card__icon" aria-hidden="true">
+              <!-- Layout/App icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+
+            <h2 class="service-card__title">Développement d'applications web</h2>
+            <p class="service-card__desc">
+              Développement d'applications web complètes avec un back-end robuste
+              et un front-end interactif. CRUD, authentification, gestion de rôles —
+              des solutions sur mesure adaptées à vos besoins métier.
+            </p>
+            <div class="service-card__tags">
+              <span class="tag-pill">PHP</span>
+              <span class="tag-pill">Laravel</span>
+              <span class="tag-pill">MySQL</span>
+            </div>
+          </article>
+
+          <!-- Card 3 : UML / BDD -->
+          <article class="service-card stagger" role="listitem">
+            <span class="service-card__num" aria-hidden="true">03</span>
+
+            <div class="service-card__icon" aria-hidden="true">
+              <!-- Database icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>
+            </div>
+
+            <h2 class="service-card__title">Modélisation des bases de données UML</h2>
+            <p class="service-card__desc">
+              Conception rigoureuse de schémas de bases de données grâce aux diagrammes UML —
+              diagrammes de classes, entité-relation, dictionnaire de données.
+              Une architecture solide pour des données bien structurées.
+            </p>
+            <div class="service-card__tags">
+              <span class="tag-pill">UML</span>
+              <span class="tag-pill">MCD / MLD</span>
+              <span class="tag-pill">MySQL</span>
+              <span class="tag-pill">Conception</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- TECH STACK -->
+    <section class="tech" id="tech" aria-label="Technologies maîtrisées">
+      <div class="container">
+
+        <div class="tech__layout">
+
+          <!-- Sidebar gauche -->
+          <div class="tech__sidebar anim anim-d4">
+            <p class="section-tag">Technologies</p>
+            <h2 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2rem);">
+              Ma stack <em>technique</em>
+            </h2>
+            <p class="tech__intro">
+              Les outils et langages que j'utilise au quotidien pour concevoir,
+              développer et déployer des projets web de qualité.
+            </p>
+          </div>
+
+          <!-- Catégories droite -->
+          <div class="tech__categories">
+
+            <!-- Front-end -->
+            <div class="stagger">
+              <div class="tech-cat__header">
+                <span class="tech-cat__label">Front-end</span>
+                <div class="tech-cat__line"></div>
+              </div>
+              <div class="tech-cat__grid">
+
+                <div class="tech-item" style="--level:90%">
+                  <div class="tech-item__icon">
+                    <!-- HTML5 -->
+                     <i class="fab fa-html5 fa-lg fa-fw" style="color: #E44D26;"></i>
+                    
+                  </div>
+                  <span class="tech-item__name">HTML5</span>
+                  <span class="tech-item__level">Avancé</span>
+                </div>
+
+                <div class="tech-item" style="--level:88%">
+                  <div class="tech-item__icon">
+                    <!-- CSS3 -->
+                    <i class="fab fa-css3 fa-lg fa-fw" style="color: #33A9DC;"></i>
+                  </div>
+                  <span class="tech-item__name">CSS3</span>
+                  <span class="tech-item__level">Avancé</span>
+                </div>
+
+                <div class="tech-item" style="--level:70%">
+                  <div class="tech-item__icon">
+                    <!-- JS -->
+                    <i class="fab fa-js fa-lg fa-fw" style="color: #F7DF1E;"></i>
+                  </div>
+                  <span class="tech-item__name">JavaScript</span>
+                  <span class="tech-item__level">Intermédiaire</span>
+                </div>
+
+                <div class="tech-item" style="--level:75%">
+                  <div class="tech-item__icon">
+                    <!-- Bootstrap -->
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="32" height="32" rx="6" fill="#7952B3" />
+                      <path
+                        d="M9 8h8.5c3.6 0 5.5 1.8 5.5 4.3 0 2-1.2 3.4-2.9 3.9v.1c2.2.4 3.7 1.9 3.7 4.2 0 3-2.1 5-5.9 5H9V8zm3 6.9h4.8c1.7 0 2.7-.8 2.7-2.2 0-1.3-.9-2.1-2.6-2.1H12v4.3zm0 7.5h5.2c1.9 0 2.9-.9 2.9-2.4 0-1.5-1.1-2.3-3-2.3H12v4.7z"
+                        fill="#fff" />
+                    </svg>
+                  </div>
+                  <span class="tech-item__name">Bootstrap</span>
+                  <span class="tech-item__level">Intermédiaire</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Back-end -->
+            <div class="stagger">
+              <div class="tech-cat__header">
+                <span class="tech-cat__label">Back-end</span>
+                <div class="tech-cat__line"></div>
+              </div>
+              <div class="tech-cat__grid">
+
+                <div class="tech-item" style="--level:82%">
+                  <div class="tech-item__icon">
+                    <!-- PHP -->
+                    <i class="fab fa-php fa-lg fa-fw" style="color: #777BB4;"></i>
+                  </div>
+                  <span class="tech-item__name">PHP</span>
+                  <span class="tech-item__level">Intermédiaire</span>
+                </div>
+
+                <div class="tech-item" style="--level:75%">
+                  <div class="tech-item__icon">
+                    <!-- Laravel -->
+                    <i class="fab fa-laravel fa-lg fa-fw" style="color: #FF2D20;"></i>
+                  </div>
+                  <span class="tech-item__name">Laravel</span>
+                  <span class="tech-item__level">Intermédiaire</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Base de données -->
+            <div class="stagger">
+              <div class="tech-cat__header">
+                <span class="tech-cat__label">Base de données</span>
+                <div class="tech-cat__line"></div>
+              </div>
+              <div class="tech-cat__grid">
+
+                <div class="tech-item" style="--level:75%">
+                  <div class="tech-item__icon">
+                    <!-- MySQL -->
+                    <i class="bi-filetype-sql" style="color: #00758F;"></i>
+                  </div>
+                  <span class="tech-item__name">MySQL</span>
+                  <span class="tech-item__level">Intermédiaire</span>
+                </div>
+
+                <div class="tech-item" style="--level:60%">
+                  <div class="tech-item__icon">
+                    <!-- UML / diagrammes -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00dc96" stroke-width="1.7"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="7" height="5" rx="1" />
+                      <rect x="14" y="3" width="7" height="5" rx="1" />
+                      <rect x="8" y="16" width="8" height="5" rx="1" />
+                      <path d="M6.5 8v3h11V8" />
+                      <line x1="12" y1="11" x2="12" y2="16" />
+                    </svg>
+                  </div>
+                  <span class="tech-item__name">UML</span>
+                  <span class="tech-item__level">Intermédiaire</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  CTA -->
+    <div class="cta" aria-label="Appel à l'action">
+      <div class="cta__text">
+        <p class="cta__eyebrow">On collabore ?</p>
+        <h2 class="cta__title">Vous avez un projet en tête ? <em>Parlons-en.</em></h2>
+      </div>
+      <a href="https://wa.me/261346310581" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7
+                   8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
+                   8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+        </svg>
+        Me contacter sur WhatsApp
+      </a>
+    </div>
+
+  </main>
+
+  <script src="../js/services.js"></script>
+</body>
+
+</html>

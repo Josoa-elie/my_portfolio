@@ -1,0 +1,17 @@
+:root {
+  --c-bg:       #0a0c10;
+  --c-surface:  #111318;
+  --c-card:     #161920;
+  --c-border:   rgba(0, 220, 150, 0.12);
+  --c-border2:  rgba(0, 220, 150, 0.06);
+  --c-accent:   #00dc96;
+  --c-accent2:  #00a8ff;
+  --c-text:     #dce3ef;
+  --c-muted:    #5a6278;
+  --c-dim:      #2a2f3d;
+  --ff-mono:    'JetBrains Mono', monospace;
+  --ff-body:    'Outfit', sans-serif;
+  --nav-h:      68px;
+  --max-w:      1500px;
+  --px:         clamp(1.2rem, 5vw, 5rem);
+}

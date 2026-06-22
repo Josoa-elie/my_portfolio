@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Josoa Elie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+  <!--  NAV  -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <a href="../index.html" class="nav__logo">Josoa<span>.</span>Elie</a>
+
+      <button class="nav__toggle" id="toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="menu" role="list">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!--  PAGE HEADER  -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag anim anim-d1">Prenons contact</p>
+        <h1 class="section-title anim anim-d2">Discutons de votre <em>projet</em></h1>
+        <p class="section-desc anim anim-d3">
+          Vous avez une idée, un projet web ou une mission freelance ?
+          Je suis disponible et réponds généralement sous 24h.
+        </p>
+      </div>
+    </section>
+
+    <!--  CONTACT LAYOUT  -->
+    <section id="form" aria-label="Formulaire de contact" style="margin-bottom: 25px;">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- ── Infos gauche ── -->
+          <aside class="contact-info stagger" aria-label="Coordonnées">
+
+            <p class="contact-info__desc">
+              N'hésitez pas à me contacter directement via les canaux ci-dessous
+              ou en remplissant le formulaire. Je serai ravi d'échanger avec vous.
+            </p>
+
+            <div class="contact-channels" role="list">
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/elie.josoa" target="_blank" rel="noopener noreferrer" class="channel"
+                role="listitem" aria-label="Facebook">
+                <div class="channel__icon channel__icon--fb">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                  </svg>
+                </div>
+                <div class="channel__text">
+                  <div class="channel__label">Facebook</div>
+                  <div class="channel__value">elie.josoa</div>
+                </div>
+                <svg style="margin-left:auto;color:var(--c-muted);flex-shrink:0" width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/Josoa-elie" target="_blank" rel="noopener noreferrer" class="channel"
+                role="listitem" aria-label="GitHub">
+                <div class="channel__icon channel__icon--gh">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61
+                             c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77
+                             5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0
+                             C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78
+                             c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                  </svg>
+                </div>
+                <div class="channel__text">
+                  <div class="channel__label">GitHub</div>
+                  <div class="channel__value">Josoa-elie</div>
+                </div>
+                <svg style="margin-left:auto;color:var(--c-muted);flex-shrink:0" width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/261346310581" target="_blank" rel="noopener noreferrer" class="channel"
+                role="listitem" aria-label="WhatsApp">
+                <div class="channel__icon channel__icon--wa">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7
+                             8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8
+                             8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                  </svg>
+                </div>
+                <div class="channel__text">
+                  <div class="channel__label">WhatsApp</div>
+                  <div class="channel__value">+261 34 63 105 81</div>
+                </div>
+                <svg style="margin-left:auto;color:var(--c-muted);flex-shrink:0" width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:josoaelieandrianiaina@email.com" class="channel" role="listitem" aria-label="Email">
+                <div class="channel__icon channel__icon--mail">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="channel__text">
+                  <div class="channel__label">Email</div>
+                  <div class="channel__value">josoaelieandrianiaina@email.com</div>
+                </div>
+                <svg style="margin-left:auto;color:var(--c-muted);flex-shrink:0" width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+            </div>
+
+            <!-- Disponibilité -->
+            <div class="availability" aria-label="Disponibilité">
+              <div class="availability__dot"></div>
+              <div class="availability__text">
+                <div class="availability__status">Disponible pour de nouveaux projets</div>
+                <div class="availability__sub">Répond sous 24h.</div>
+              </div>
+            </div>
+
+          </aside>
+
+          <!-- ── Formulaire droite ── -->
+          <div class="contact-form-wrap stagger" id="contact-wrap">
+            <h2 class="form-title">Envoyer un message</h2>
+            <p class="form-subtitle">// Tous les champs marqués * sont requis</p>
+
+            <form id="contact-form" novalidate autocomplete="off">
+
+              <!-- Nom + Prénom -->
+              <div class="form-row">
+                <div class="form-group" id="g-nom">
+                  <label class="form-label" for="nom">Nom <span>*</span></label>
+                  <input class="form-control" type="text" id="nom" name="nom" placeholder="ex. Rakoto" maxlength="50"
+                    required />
+                  <span class="form-error">Veuillez entrer votre nom.</span>
+                </div>
+                <div class="form-group" id="g-prenom">
+                  <label class="form-label" for="prenom">Prénom <span>*</span></label>
+                  <input class="form-control" type="text" id="prenom" name="prenom" placeholder="ex. Malala"
+                    maxlength="50" required />
+                  <span class="form-error">Veuillez entrer votre prénom.</span>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group" id="g-email">
+                <label class="form-label" for="email">Adresse email <span>*</span></label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="exemple@email.com"
+                  required />
+                <span class="form-error">Veuillez entrer une adresse email valide.</span>
+              </div>
+
+              <!-- Sujet -->
+              <div class="form-group" id="g-sujet">
+                <label class="form-label" for="sujet">Type de projet <span>*</span></label>
+                <select class="form-control" id="sujet" name="sujet" required>
+                  <option value="" disabled selected>Sélectionner un type…</option>
+                  <option value="site-web">Développement de site web</option>
+                  <option value="app-web">Application web</option>
+                  <option value="maquette">Intégration de maquette</option>
+                  <option value="bdd">Modélisation base de données</option>
+                  <option value="autre">Autre</option>
+                </select>
+                <span class="form-error">Veuillez sélectionner un type de projet.</span>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group" id="g-message">
+                <label class="form-label" for="message">Message <span>*</span></label>
+                <textarea class="form-control" id="message" name="message"
+                  placeholder="Décrivez votre projet, vos besoins, votre délai…" maxlength="600" required></textarea>
+                <p class="form-hint"><span id="char-count">0</span> / 600</p>
+                <span class="form-error">Le message doit contenir au moins 20 caractères.</span>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submit-btn">
+                <span class="btn-text" style="display:flex;align-items:center;gap:.5rem">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
+                  Envoyer le message
+                </span>
+                <div class="spinner"></div>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p class="footer__copy">
+        &copy; <span id="year"></span> <span>Josoa Elie</span> — Étudiant en Software Development
+      </p>
+      
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="alert" aria-live="assertive">
+    <div class="toast__icon" id="toast-icon"></div>
+    <p class="toast__msg" id="toast-msg"></p>
+  </div>
+
+  <!--  JS  -->
+  <script>
+    (function () {
+
+      /* ── Année automatique ────────────────────────────────── */
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      /* ── Hamburger ────────────────────────────────────────── */
+      var toggle = document.getElementById('toggle');
+      var menu = document.getElementById('menu');
+      var overlay = document.getElementById('overlay');
+
+      function openMenu() {
+        toggle.classList.add('open'); menu.classList.add('open');
+        overlay.classList.add('show'); toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        toggle.classList.remove('open'); menu.classList.remove('open');
+        overlay.classList.remove('show'); toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      toggle.addEventListener('click', function () {
+        menu.classList.contains('open') ? closeMenu() : openMenu();
+      });
+      overlay.addEventListener('click', closeMenu);
+      menu.querySelectorAll('a').forEach(function (l) { l.addEventListener('click', closeMenu); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+      /* ── Stagger observer ─────────────────────────────────── */
+      var staggerEls = document.querySelectorAll('.stagger');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry, i) {
+          if (!entry.isIntersecting) return;
+          setTimeout(function () { entry.target.classList.add('visible'); }, i * 80);
+          io.unobserve(entry.target);
+        });
+      }, { threshold: 0.08 });
+      staggerEls.forEach(function (el) { io.observe(el); });
+
+      /* ── Compteur de caractères ───────────────────────────── */
+      var textarea = document.getElementById('message');
+      var charCount = document.getElementById('char-count');
+      textarea.addEventListener('input', function () {
+        charCount.textContent = textarea.value.length;
+      });
+
+      /* ── Validation & soumission ──────────────────────────── */
+      var form = document.getElementById('contact-form');
+      var submitBtn = document.getElementById('submit-btn');
+      var toast = document.getElementById('toast');
+      var toastMsg = document.getElementById('toast-msg');
+      var toastIcon = document.getElementById('toast-icon');
+      var toastTimer;
+
+      function showToast(type, msg) {
+        clearTimeout(toastTimer);
+        toastMsg.textContent = msg;
+        toast.className = 'toast toast--' + type;
+
+        if (type === 'success') {
+          toastIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00dc96" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
+        } else {
+          toastIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff5566" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+        }
+
+        requestAnimationFrame(function () {
+          toast.classList.add('show');
+        });
+        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 5000);
+      }
+
+      function validateField(id, groupId, check) {
+        var el = document.getElementById(id);
+        var group = document.getElementById(groupId);
+        var ok = check(el.value.trim());
+        group.classList.toggle('has-error', !ok);
+        return ok;
+      }
+
+      function validateAll() {
+        var ok = true;
+        if (!validateField('prenom', 'g-prenom', function (v) { return v.length >= 2; })) ok = false;
+        if (!validateField('nom', 'g-nom', function (v) { return v.length >= 2; })) ok = false;
+        if (!validateField('email', 'g-email', function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); })) ok = false;
+        if (!validateField('sujet', 'g-sujet', function (v) { return v !== ''; })) ok = false;
+        if (!validateField('message', 'g-message', function (v) { return v.length >= 20; })) ok = false;
+        return ok;
+      }
+
+      /* live validation on blur */
+      ['prenom', 'nom', 'email', 'sujet', 'message'].forEach(function (id) {
+        var el = document.getElementById(id);
+        el.addEventListener('blur', function () {
+          validateAll();
+        });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!validateAll()) {
+          showToast('error', 'Veuillez corriger les erreurs avant d\'envoyer.');
+          return;
+        }
+
+        /* simulate sending */
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+
+        setTimeout(function () {
+          submitBtn.classList.remove('loading');
+          submitBtn.disabled = false;
+          form.reset();
+          charCount.textContent = '0';
+          showToast('success', 'Message envoyé ! Je vous répondrai sous 24h.');
+          ['prenom', 'nom', 'email', 'sujet', 'message'].forEach(function (id) {
+            var g = document.getElementById('g-' + id);
+            if (g) g.classList.remove('has-error');
+          });
+        }, 1800);
+      });
+
+    })();
+  </script>
+
+</body>
+
+</html>
