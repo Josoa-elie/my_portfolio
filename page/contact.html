@@ -176,20 +176,18 @@
             <h2 class="form-title">Envoyer un message</h2>
             <p class="form-subtitle">// Tous les champs marqués * sont requis</p>
 
-            <form id="contact-form" novalidate autocomplete="off">
+            <form id="contact-form" action="https://formspree.io/f/xwvdzwwv" method="POST" novalidate autocomplete="off">
 
               <!-- Nom + Prénom -->
               <div class="form-row">
                 <div class="form-group" id="g-nom">
                   <label class="form-label" for="nom">Nom <span>*</span></label>
-                  <input class="form-control" type="text" id="nom" name="nom" placeholder="ex. Rakoto" maxlength="50"
-                    required />
+                  <input class="form-control" type="text" id="nom" name="nom" placeholder="ex. Rakoto" maxlength="50" required />
                   <span class="form-error">Veuillez entrer votre nom.</span>
                 </div>
                 <div class="form-group" id="g-prenom">
                   <label class="form-label" for="prenom">Prénom <span>*</span></label>
-                  <input class="form-control" type="text" id="prenom" name="prenom" placeholder="ex. Malala"
-                    maxlength="50" required />
+                  <input class="form-control" type="text" id="prenom" name="prenom" placeholder="ex. Malala" maxlength="50" required />
                   <span class="form-error">Veuillez entrer votre prénom.</span>
                 </div>
               </div>
@@ -197,8 +195,8 @@
               <!-- Email -->
               <div class="form-group" id="g-email">
                 <label class="form-label" for="email">Adresse email <span>*</span></label>
-                <input class="form-control" type="email" id="email" name="email" placeholder="exemple@email.com"
-                  required />
+                <!-- Important : Formspree utilise le name="email" pour savoir où répondre -->
+                <input class="form-control" type="email" id="email" name="email" placeholder="exemple@email.com" required />
                 <span class="form-error">Veuillez entrer une adresse email valide.</span>
               </div>
 
@@ -219,16 +217,14 @@
               <!-- Message -->
               <div class="form-group" id="g-message">
                 <label class="form-label" for="message">Message <span>*</span></label>
-                <textarea class="form-control" id="message" name="message"
-                  placeholder="Décrivez votre projet, vos besoins, votre délai…" maxlength="600" required></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Décrivez votre projet, vos besoins, votre délai…" maxlength="600" required></textarea>
                 <p class="form-hint"><span id="char-count">0</span> / 600</p>
                 <span class="form-error">Le message doit contenir au moins 20 caractères.</span>
               </div>
 
               <button type="submit" class="btn-submit" id="submit-btn">
                 <span class="btn-text" style="display:flex;align-items:center;gap:.5rem">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="22" y1="2" x2="11" y2="13" />
                     <polygon points="22 2 15 22 11 13 2 9 22 2" />
                   </svg>
@@ -251,7 +247,7 @@
       <p class="footer__copy">
         &copy; <span id="year"></span> <span>Josoa Elie</span> — Étudiant en Software Development
       </p>
-      
+
     </div>
   </footer>
 
@@ -358,6 +354,7 @@
         });
       });
 
+      // Remplacement de la simulation par l'appel AJAX vers Formspree
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -366,21 +363,46 @@
           return;
         }
 
-        /* simulate sending */
+        /* 🚀 Début de l'envoi réel */
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
 
-        setTimeout(function () {
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(function (response) {
+          if (response.ok) {
+            // Succès
+            form.reset();
+            charCount.textContent = '0';
+            showToast('success', 'Message envoyé ! Je vous répondrai sous 24h.');
+            
+            // Nettoyage des classes d'erreur résiduelles
+            ['prenom', 'nom', 'email', 'sujet', 'message'].forEach(function (id) {
+              var g = document.getElementById('g-' + id);
+              if (g) g.classList.remove('has-error');
+            });
+          } else {
+            // Problème serveur (ex: mauvais endpoint Formspree)
+            showToast('error', 'Oups ! Un problème est survenu lors de l\'envoi.');
+          }
+        })
+        .catch(function (error) {
+          // Problème réseau / connexion internet coupé
+          showToast('error', 'Erreur réseau. Veuillez vérifier votre connexion.');
+          console.error('Erreur Formspree:', error);
+        })
+        .finally(function () {
+          /* Arrêt de l'animation de chargement */
           submitBtn.classList.remove('loading');
           submitBtn.disabled = false;
-          form.reset();
-          charCount.textContent = '0';
-          showToast('success', 'Message envoyé ! Je vous répondrai sous 24h.');
-          ['prenom', 'nom', 'email', 'sujet', 'message'].forEach(function (id) {
-            var g = document.getElementById('g-' + id);
-            if (g) g.classList.remove('has-error');
-          });
-        }, 1800);
+        });
       });
 
     })();
