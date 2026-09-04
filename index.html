@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/download.css"><!-- ajouté : styles pour l'indicateur de download -->
   <link rel="stylesheet" href="assets/icons/fontawesome/css/all.css">
 </head>
 <body>
@@ -52,7 +53,12 @@
 
         <div class="hero__actions">
           <!-- CV download -->
-          <a href="assets/images/Mon_CV.png" class="btn-outline" download>
+          <a href="assets/images/Curriculum vitæ.pdf"
+             id="download-cv"
+             class="btn-outline"
+             download
+             aria-describedby="download-status"
+             aria-pressed="false">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                  aria-hidden="true">
@@ -63,9 +69,15 @@
             Télécharger CV
           </a>
 
+          <!-- Indicateur de téléchargement (visuel + texte accessible) -->
+          <div id="download-indicator" class="download-indicator" aria-hidden="true" aria-live="polite">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="progress-bar" aria-hidden="true"><span class="progress-fill" style="width:0%"></span></span>
+            <span id="download-status" class="sr-only" aria-live="polite"></span>
+          </div>
+
           <!-- Réseaux -->
           <nav class="socials" aria-label="Réseaux sociaux">
-
             <!-- Facebook -->
             <a href="https://www.facebook.com/elie.josoa" target="_blank"
                rel="noopener noreferrer" aria-label="Facebook">
